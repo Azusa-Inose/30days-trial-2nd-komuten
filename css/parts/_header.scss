@@ -1,0 +1,190 @@
+.header {
+    height: 80px;
+    position: fixed;
+    background: rgba(#fff, .8);
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    @include mq('sp') {
+        height: 64px;
+    }
+    .header__inner {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.header__logo {
+    margin-right: 2rem;
+    a {
+        display: inline-block;
+        height: 100%;
+        h1 {
+            display: inline-block;
+            img {
+                width: 140px;
+                @include mq('sp') {
+                    width: 114px;
+                }
+            }
+        }
+    }
+}
+
+.header__nav {
+    height: 100%;
+    @include mq('tb') {
+        display: none;
+    }
+    ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .header__nav-link {
+            padding: 0 2rem;
+            display: inline-block;
+            // flex-grow: 1;
+            position: relative;
+            // height: 36px;
+            a {
+                padding: 25px 0 40px;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                position: relative;
+                color: $font-color;
+                span {
+                    position: absolute;
+                    display: inline-block;
+                    font-size: 12px;
+                    color: $accent-color;
+                    width: 100%;
+                    left: 0;
+                    text-align: center;
+                    top: 46px;
+                    font-family: $font-family-en;
+                }
+            }
+            // 区切り用のボーダー
+            &::before {
+                position: absolute;
+                content: "";
+                display: inline-block;
+                background: $font-color;
+                width: 1px;
+                height: 36px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }   
+    }
+}
+
+.header__contact-wrap {
+    margin-left: auto;
+    background: $main-color;
+    height: 100%;
+    width: 168px;
+    @include mq('tb') {
+        display: none;
+    }
+    a {
+        padding: 25px 0 40px;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        span {
+            position: absolute;
+            display: inline-block;
+            font-size: 12px;
+            color: $accent-color;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            top: 46px;
+        }
+    }
+}
+
+.header__drawer, .header__drawer-content {
+    display: none;
+
+    @include mq('tb') {
+        display: block;
+    }
+}
+
+.header__drawer {
+    &-icon {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        z-index: 41;
+        .header__drawer-open {
+            display: block;
+            font-size: 20px;
+        }
+        .header__drawer-close {
+            display: none;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+}
+
+// m_checked(アイコンクリック時)
+.m_checked .header__drawer-open {
+    display: none;
+}
+
+.m_checked  .header__drawer-close {
+    display: block;
+}
+
+.header__drawer-content {
+	background: $main-color;
+    opacity: .8;
+	height: 100vh;
+	left: 0;
+	opacity: 0;
+	overflow: auto;
+	padding: 100px 16px 16px;
+	position: fixed;
+	text-align: left;
+	top: 0;
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 100%;
+	z-index: 40;
+}
+
+.m_checked .header__drawer-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+.header__drawer-nav {
+    &-list {
+        li {
+            a {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                border-left: 6px solid transparent;
+                color: #fff;
+                display: block;
+                font-size: 18px;
+                text-align: center;
+                padding: 34px 12px;
+                text-decoration: none;
+                @include mq('sp') {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

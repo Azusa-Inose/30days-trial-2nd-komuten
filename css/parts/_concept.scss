@@ -1,0 +1,105 @@
+.concept {
+    padding-top: 120px;
+    @include mq('sp') {
+        padding-top: 80px;
+    }
+}
+
+.concept__wrap {
+    position: relative;
+    @include mq('sp') {
+        position: initial;
+    }
+    .concept__img-outer {
+        width: 77.8%;
+        height: 10%;
+        margin-left: auto;
+        @include mq('sp') {
+            width: 100%;
+        }
+        .concept__img-inner {
+            background-image: url('../img/pc-assets/image-concept.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding-top: 42.9%;
+            @include mq('sp') {
+                background-image: url('../img/sp-assets/concept-image.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                padding-top: 96%;
+            }
+        }
+    }
+    .concept__text {
+        background: $main-color;
+        display: inline-block;
+        padding: 4rem 3rem;
+        color: #fff;
+        width: 44.4%;
+        position: absolute;
+        // top: 38.3%;
+        top: 36%;
+        left: 0;
+        @include mq('tb') {
+            width: 56.5%;
+            padding: 2.5rem 3rem;
+        }
+        @include mq('sp') {
+            width: 100%;
+            position: initial;
+            padding: 3.5rem 20px;
+        }
+        h3 {
+            font-size: 24px;
+            @include mq('tb') {
+                font-size: 20px;
+            }
+        }
+        p {
+            letter-spacing: .55px;
+            line-height: (36/16);
+            margin: 2rem 0;
+            @include mq('tb') {
+                margin: 1rem 0;
+                line-height: (28/16);
+            }
+            @include mq('sp') {
+                letter-spacing: .8px;
+                margin: 1.5rem 0;
+            }
+        }
+        .concept__more {
+            text-align: right;
+            padding-right: 20px;
+            a {
+                color: #fff;
+                position: relative;
+                @include mq('tb') {
+                    font-size: 14px;
+                }
+                @include mq('sp') {
+                    font-size: 1rem;
+                }
+                &::after {
+                    content: url('../img/pc-assets/arrow-w-icon.svg');
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    right: -1.2rem;
+                    display: inline-block;
+                    fill: $main-color;
+                    vertical-align: middle;
+                    @include mq('tb') {
+                        width: 12px;
+                        height: 12px;
+                    }
+                    @include mq('sp') {
+                        right: -1rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.works {
+    padding-top: 124px;
+    position: relative;
+    @include mq('sp') {
+        padding-top: 80px;
+    }
+    // 背景のボックス
+    &::before {
+        position: absolute;
+        content: "";
+        background: #eeead0;
+        width: 68.4%;
+        height: 59.5%;
+        right: 0;
+        top: 32.5%;
+        @include mq('sp') {
+            width: 74.6%;
+            top: 34%;
+            height: 57.8%;
+        }
+    }
+}
+
+.works__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    margin: 0 auto;
+    @include mq('tb') {
+        max-width: 740px;
+        justify-content: space-between;
+    }
+    @include mq('sp') {
+        // max-width: 335px;
+        max-width: 89.33%;
+    }
+}
+
+.work__item {
+    width: calc(33.33% - 27px);
+    margin: 0 3.84% 41px 0;
+    position: relative;
+    z-index: 10;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    @include mq('sp') {
+        width: calc(50% - 7px);
+        margin: 0;
+    }
+
+    a {
+        display: inline-block;
+    }
+    
+    &-img {
+        img {
+            @include mq('sp') {
+                height: 105px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-body {
+        padding: 24px 2rem;
+        position: relative;
+        @include mq('sp') {
+            padding: 1rem 18px 40px;
+        }
+
+        // 装飾ボーダー
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 144px;
+            background: $font-color;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            @include mq('sp') {
+                left: 8px;
+                height: 96px;
+                bottom: 40px;
+            }
+        }
+        
+        .work__item-name {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: $font-color;
+            @include mq('sp') {
+                font-size: 20px;
+                margin-bottom: 1rem;
+            }
+        }
+        .work__item-more {
+            span {
+                position: relative;
+                color: $font-color;
+                &::after {
+                    content: url('../img/pc-assets/arrow-b-icon.svg');
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    right: -1.2rem;
+                    display: inline-block;
+                    fill: $font-color;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.works__more {
+    margin-top: 1rem;
+    text-align: center;
+    @include mq('sp') {
+        margin-top: 25px;
+    }
+}

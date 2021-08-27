@@ -1,0 +1,28 @@
+.top {
+    background-image: url('../img/pc-assets/top-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: 900px;
+    background-size: cover;
+    @include mq('sp') {
+        background-image: url('../img/sp-assets/top-image.jpg');
+        height: 812px;
+    }
+}
+
+.top__inner {
+    padding: 385px 0 0;
+    @include mq('sp') {
+        padding: 305px 0;
+    }
+    .top__title {
+        display: inline-block;
+        width: 85.57%;
+        margin: 0 auto;
+        @include mq('sp') {
+            width: 100%;
+        }
+    }
+    
+}

@@ -1,0 +1,154 @@
+.footer__upper {
+    padding: 80px 0 122px;
+    background: $main-color;
+    color: #fff;
+    @include mq('sp') {
+        padding: 40px 0 1rem;
+    }
+    &-inner {
+
+    }
+}
+
+.footer__info {
+    text-align: center;
+    .en {
+        font-family: $font-family-en;
+    }
+    .footer__logo {
+        a {
+            display: inline-block;
+            width: 82px;
+            height: 90px;
+            img {
+                width: 100%;
+            }
+        }
+    }   
+    .footer__company {
+        margin-top: 1.5rem;
+    }
+    .footer__address {
+        margin-top: 1rem;
+    }
+    .footer__tel {
+        margin-top: 1rem;
+        @include mq('sp') {
+            margin-top: 18px;
+        }
+    }
+    .footer__email {
+        margin-top: 1rem;
+        @include mq('sp') {
+            margin-top: 18px;
+        }
+    }
+}
+
+.footer__nav {
+    ul {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        @include mq('sp') {
+            flex-direction: column;
+        }
+        .footer__nav-item {
+            a {
+                display: inline-block;
+                padding: 0 2rem;
+                color: #fff;
+                border-right: 1px solid #fff;
+                @include mq('sp') {
+                    border-right: none;
+                    width: 100%;
+                    text-align: center;
+                    padding: 1.5rem 0;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            &:last-child a {
+                border-right: none;
+                @include mq('sp') {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.footer__lower {
+    background: $font-color;
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding: 17px 0;
+    @include mq('sp') {
+        padding: 2rem 0 1rem;
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        @include mq('tb') {
+            max-width: 700px;
+        }
+        @include mq('sp') {
+            display: block;
+            max-width: 89.33%;
+        }
+    }
+}
+
+.footer__left {
+    display: inline-block;
+    @include mq('sp') {
+        display: block;
+        text-align: center;
+    }
+    .sitemap {
+        color: #fff;
+        margin-right: 2rem;
+        position: relative;
+        @include mq('sp') {
+            font-size: 14px;
+        }
+        @include mq('sm') {
+            font-size: 12px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 1rem;
+            background: #fff;
+            top: 4px;
+            right: -2rem;
+        }
+    }
+    .privacypolicy {
+        margin-left: 30px;
+        color: #fff;
+        @include mq('sp') {
+            font-size: 14px;
+        }
+        @include mq('sm') {
+            font-size: 12px;
+        }
+    }
+}
+
+.footer__right {
+    display: inline-block;
+    @include mq('sp') {
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .copyright {
+        font-size: 12px;
+        @include mq('sm') {
+            font-size: 10px;
+        }
+    }
+}

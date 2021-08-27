@@ -1,0 +1,141 @@
+.contact {
+    padding: 124px 0 120px;
+    background: #eeead0;
+    @include mq('sp') {
+        padding: 40px 0;
+    }
+}
+
+.contact__wrap {
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    @include mq('tb') {
+        max-width: 740px;
+        margin: 0 auto;
+    }
+    @include mq('sp') {
+        flex-direction: column;
+    }
+}
+
+.contact__item {
+    width: 282px;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid $font-color;
+    padding: 1.5rem 0;
+    &:last-child {
+        border-right: none;
+    }
+    @include mq('sp') {
+        border-right: none;
+        width: 100%;
+        border-bottom: 1px solid $font-color;
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem 2rem 12px;
+        justify-content: space-between;
+    }
+    .contact__icon {
+        @include mq('sp') {
+            display: inline-block;
+        }
+    }
+    .contact__text {
+        font-size: 20px;
+        margin-top: 18px;
+        @include mq('sp') {
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        @include mq('sm') {
+            font-size: 12px;
+        }
+    }
+    .contact__btn {
+        margin-top: 23px;
+        @include mq('sp') {
+            display: inline-block;
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        @include mq('sm') {
+            font-size: 12px;
+        }
+        a {
+            display: inline-block;
+            color: #fff;
+            padding: 1rem 2rem;
+            @include mq('sm') {
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+    .contact__tel-text {
+        @include mq('sp') {
+            display: inline-block;
+            text-align: right;
+        }
+        .tel {
+            font-size: 1.5rem;
+            font-family: $font-family-en;
+            margin-top: 1.5rem;
+        }
+        .contact__btn {
+            display: none;
+            @include mq('sp') {
+                display: inline-block;
+            }
+        }
+        .hour {
+            font-size: 12px;
+            margin-top: 8px;
+            @include mq('sm') {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.contact__item.mail {
+    .contact__text {
+        padding-top: 5px;
+    }
+    .contact__btn a {
+        background: $main-color;
+    }
+}
+
+.contact__item.doc {
+    .contact__btn a {
+        background: $accent-color;
+    }
+}
+
+.contact__item.tel {
+    @include mq('sp') {
+        padding: 2rem 0 0;
+        border-bottom: none;
+        .contact__btn {
+            display: inline-block;
+            font-size: 1rem;
+            margin-right: 1rem;
+            a {
+                display: inline-block;
+                background: $main-color;
+                padding: 1rem 44px;
+            }
+        }
+    }
+    @include mq('sm') {
+        font-size: 12px;
+        .contact__btn {
+            font-size: 12px;
+            a {
+                padding: 1rem 36px;
+            }
+        }
+    }
+}
